@@ -1,0 +1,231 @@
+body, html {
+  height: 100%;
+  margin:0;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 180%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.parallax1 {
+  background-image: url(https://images3.alphacoders.com/594/thumb-1920-594756.jpg);
+  min-height: 100%;
+}
+.parallax2 {
+  background-image: url(img/m.jpg);
+  min-height: 100%;
+}
+.parallax3 {
+  background-image: url(img/jjj.jpg); 
+  min-height: 100%;
+}
+.parallax4 {
+  background-image: url(img/ford.jpg);
+  min-height: 100%;
+}
+.parallax5 {
+  background-image: url(img/Nya-Ford-Mustang-Shelby-GT500-med-700-hästar-5.jpg);
+  min-height: 100%;
+}
+.parallax6 {
+  background-image: url(img/r.jpg);
+  min-height: 100%;
+}
+.parallax7 {
+  background-image: url(img/carb.jpg);
+  min-height: 100%;
+}
+
+.parallax1, .parallax2, .parallax3, .parallax4, .parallax5, .parallax6, .parallax7 {
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+.topnav a {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.head {
+  position: absolute;
+  color: #fff;
+  font-size: 450%;
+  top:20%;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  animation: drop 3.5s ease;
+}
+
+._head {
+  position: absolute;
+  color: #fff;
+  font-size: 120%;
+  top:88%;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  animation: drop 4.5s ease; 
+}
+
+.section {
+  overflow: auto;
+  padding: 200px 80px;
+  background-color: #6e6969;
+
+}
+
+footer{
+  width: 100%;
+  background-color: #323232;
+  color: #f2f2f2;
+  height: 8vh;
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 1vh;
+}
+
+@media (max-width:800px) {
+  .head{
+      font-size: 200%;
+  }
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+img {
+  max-width: 50%
+}
+.image {
+  flex-basis: 50%;
+  order: 2;
+}
+.text {
+
+  padding-left: 20px;
+  font: 'Ubuntu', sans-serif;
+}
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: right;
+  color: #ffffff;
+  text-align: center;
+  padding: 18px 18px;
+  text-decoration: none;
+  font-size: 17px;
+  animation: drop 3.5s ease; 
+  top:15%;
+}
+
+
+.topnav a:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+
+/**/
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
